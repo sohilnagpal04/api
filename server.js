@@ -19,6 +19,10 @@ const SensorData = mongoose.model('SensorData', {
 
 app.use(bodyParser.json());
 
+app.get('/test', async (req, res) => {
+    res.status(200).send('API Test Success')
+})
+
 // Endpoint to receive sensor data
 app.post('/sensor', async (req, res) => {
   try {
